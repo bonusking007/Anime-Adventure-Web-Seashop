@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEASHOP · Anime Adventures</title>
+<link rel="icon" href="/assets/sea-shop-logo.png">
+<link rel="stylesheet" href="/assets/styles.css?v=3">
+<script src="/assets/app.js?v=3" defer></script>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand"><img class="brand-logo" src="/assets/sea-shop-logo.png" alt=""><div><b>SEASHOP</b><small>ANIME ADVENTURES</small></div></div>
+    <nav aria-label="เมนูหลัก"><button id="nav-home" type="button">HOME</button> <button id="nav-dash" type="button">DASHBOARD</button></nav>
+    <div class="live">LIVE TRACKER</div>
+  </div>
+</header>
+<main>
+  <section id="home" class="hero">
+    <div>
+      <img class="hero-logo" src="/assets/sea-shop-logo.png" alt="">
+      <h1>ANIME ADVENTURES<br><span>LIVE DASHBOARD</span></h1>
+      <p class="sub">ติดตามสถิติผู้เล่นและไอเทมที่ได้รับจากรอบล่าสุด</p>
+      <button id="enter" class="start" type="button">ENTER DASHBOARD →</button>
+    </div>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="head">
+      <div><h2>ANIME ADVENTURES TRACKER</h2><p class="mut">เลือกบัญชีเพื่อดูสถิติและไอเทม</p></div>
+      <div class="status"><b id="health">รอเชื่อมต่อ</b></div>
+    </div>
+    <form id="profile" class="tools aa-login">
+      <label for="key">รหัสสำหรับดูข้อมูล</label>
+      <input id="key" class="search" type="password" autocomplete="off" required>
+      <button class="btn" type="submit">เปิด Dashboard</button>
+    </form>
+    <p id="status" class="mut" role="status"></p>
+    <div id="feed" hidden>
+      <section id="overview">
+        <div class="sum" aria-label="สถิติรวม">
+          <div><span>บัญชีทั้งหมด</span><b id="account-count">0</b></div>
+          <div><span>กำลังส่งข้อมูล</span><b id="online-count">0</b></div>
+          <div><span>เพชรรวม</span><b id="total-gems">—</b></div>
+          <div><span>ทองรวม</span><b id="total-gold">—</b></div>
+        </div>
+        <div class="tools">
+          <input id="search" type="search" class="search" aria-label="ค้นหาผู้เล่นหรือไอเทม" placeholder="ค้นหาชื่อผู้เล่นหรือไอเทม…">
+          <label class="check"><input id="online" type="checkbox"> เฉพาะบัญชีที่กำลังส่ง</label>
+          <button id="refresh" class="btn" type="button">REFRESH DATA</button>
+        </div>
+        <div class="dashgrid">
+          <div class="panel">
+            <div class="paneltitle"><b>TRACKED ACCOUNTS · <span id="visible-count">0</span></b></div>
+            <p id="empty" class="empty"></p>
+            <div id="cards" class="accounts"></div>
+          </div>
+          <aside class="side">
+            <div class="card"><h4>TRACKER SYSTEM</h4><div class="kv"><span>รีเฟรช</span><b>15 SEC</b></div><div class="kv"><span>ช่วงสถานะออนไลน์</span><b>60 SEC</b></div></div>
+            <div class="card"><h4>RECENT SYNC</h4><div id="recent" class="mut">ยังไม่มีข้อมูล</div></div>
+          </aside>
+        </div>
+      </section>
+      <section id="detail" hidden aria-labelledby="name">
+        <div class="detailtop"><button id="back" class="btn" type="button">← กลับรายชื่อ</button><b id="player-online"></b><button id="detail-refresh" class="btn" type="button">REFRESH</button></div>
+        <div class="detailgrid">
+          <aside class="profile panel">
+            <div id="bigav" class="bigav" aria-hidden="true"></div>
+            <h3 id="name" tabindex="-1"></h3><p id="updated"></p>
+            <div class="stats">
+              <div><span>เพชร</span><b id="gems"></b></div>
+              <div><span>ทอง</span><b id="gold"></b></div>
+              <div><span>เวฟ</span><b id="wave"></b></div>
+            </div>
+          </aside>
+          <section class="box">
+            <div class="boxhead"><b>ไอเทมและรางวัลรอบล่าสุด</b></div>
+            <div class="aa-rewards">
+              <p id="stage" class="mut"></p>
+              <ul id="rewards" class="reward-list"></ul>
+              <p id="no-items" class="mut">ยังไม่มีข้อมูลไอเทม</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+</body>
+</html>
