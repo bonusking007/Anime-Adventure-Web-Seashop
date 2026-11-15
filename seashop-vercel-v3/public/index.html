@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seashop · ติดตามการฟาร์ม</title><link rel="icon" href="/assets/sea-shop-logo.png"><link rel="stylesheet" href="/assets/styles.css?v=5"><script src="/assets/app.js?v=5" defer></script></head>
+<body><header><div class="bar"><a class="brand" href="#home"><img src="/assets/sea-shop-logo.png" alt=""><b>Sea<span>shop</span></b></a><nav aria-label="เมนูหลัก"><button id="nav-home">หน้าแรก</button><button id="nav-dash">ดูสถานะการฟาร์ม</button></nav></div></header>
+<main>
+<section id="home" class="hero">
+<div class="hero-copy"><span class="eyebrow">SEASHOP · ANIME ADVENTURES</span><h1>ทุกไอเทมที่ได้<br><em>ติดตามได้ในที่เดียว</em></h1><p>เช็กสถิติและรางวัลของบัญชีคุณได้ง่าย ๆ<br>เลือกผู้เล่น แล้วดูข้อมูลล่าสุดจากเกม</p><button id="enter" class="primary">ดูสถานะการฟาร์ม <span>↗</span></button><div class="hero-note"><span class="dot"></span> ข้อมูลอัปเดตจากบัญชีที่เชื่อมต่อ</div></div>
+<div class="hero-art"><div class="art-label">ยินดีต้อนรับสู่ Seashop</div><img src="/assets/sea-shop-logo.png" alt="Seashop"><div class="art-bottom"><div><small>ติดตามบัญชีของคุณ</small><h2>Anime Adventures</h2></div><span class="art-arrow">↗</span></div></div>
+</section>
+<section id="dashboard" hidden>
+<div class="head"><div><span class="eyebrow">ติดตามการฟาร์ม</span><h1 class="page-title">บัญชีผู้เล่น</h1><p class="mut">เลือกบัญชีเพื่อดูไอเทมและสถิติรายคน</p></div><span id="health" class="status">รอเชื่อมต่อ</span></div>
+<form id="profile" class="login"><label for="key">รหัสสำหรับดูข้อมูล</label><div class="login-row"><input id="key" type="password" autocomplete="off" required placeholder="กรอกรหัสเข้าดูข้อมูล"><button class="primary" type="submit">เปิด Dashboard</button></div></form>
+<p id="status" class="mut" role="status"></p>
+<div id="feed" hidden><section id="overview">
+<div class="overview-bar"><div class="total"><span>ผู้ใช้ทั้งหมด</span><strong id="account-count">0</strong><span>บัญชี</span></div><div class="tools"><input id="search" type="search" aria-label="ค้นหาผู้เล่นหรือไอเทม" placeholder="ค้นหาผู้เล่นหรือไอเทม…"><label class="check"><input id="online" type="checkbox"> ออนไลน์เท่านั้น</label><button id="refresh" class="secondary">รีเฟรช</button></div></div>
+<p id="empty" class="empty"></p><div id="cards" class="accounts"></div>
+</section>
+<section id="detail" hidden aria-labelledby="name">
+<div class="detailtop"><button id="back" class="secondary">← กลับรายชื่อผู้เล่น</button><button id="detail-refresh" class="secondary">รีเฟรชข้อมูล</button></div>
+<div class="detailgrid"><aside class="profile panel"><div class="profile-art"><span id="player-online" class="status"></span><div id="bigav" class="bigav" aria-hidden="true"></div><small>ANIME ADVENTURES</small></div><div class="profile-info"><h2 id="name" tabindex="-1"></h2><p id="description" class="custom-description"></p><p id="updated" class="mut"></p></div><div class="stats"><div><span>เพชร</span><b id="gems"></b></div><div><span>ทอง</span><b id="gold"></b></div><div><span>เวฟ</span><b id="wave"></b></div></div></aside>
+<section class="panel items-panel"><div class="items-heading"><span class="eyebrow">ข้อมูลรอบล่าสุด</span><h2 id="stage"></h2><p class="mut">ไอเทมและรางวัลที่ได้รับ</p></div><div class="table-wrap"><table><thead><tr><th scope="col">ไอเทม / รางวัล</th><th scope="col">จำนวน</th></tr></thead><tbody id="rewards"></tbody></table></div><p id="no-items" class="empty">ยังไม่มีข้อมูลรางวัล รอข้อมูลหลังจบรอบ</p><div class="table-note">แสดงรางวัลรอบล่าสุดที่ได้รับข้อมูล</div></section></div>
+</section></div></section></main><footer>Seashop <span>·</span> Anime Adventures</footer></body></html>
